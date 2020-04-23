@@ -7,6 +7,12 @@ import {EventEmitter} from './EventEmitter';
 
 export interface CurliApplication extends EventEmitter{
 
+
+    /**
+     * Initial configuration provider when we instantiate this app object.
+     */
+    initialConfiguration: { [key: string]: any } | undefined;
+
     /**
      * Add a module definer to extend the modules behaviour.
      * @param modulesDefiner
