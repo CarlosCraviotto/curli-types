@@ -1,6 +1,6 @@
-import {ExternalServicesRegister} from './ExternalServicesRegister';
+import {ServiceDescriptionsHandler} from './ServiceDescriptionsHandler';
 
-export interface DependencyInjection {
+export interface DependencyInjection extends ServiceDescriptionsHandler{
     /**
      * Get the service
      * @param {string} name of the service
@@ -27,20 +27,4 @@ export interface DependencyInjection {
      * @returns {array} The Collection of services.
      */
     getServicesCollection(): Array<string>;
-
-    registerService<T extends {}>(
-        serviceName: string,
-        dependencies: Array<string>,
-        serviceFunc: T,
-        autoInit?: boolean,
-        injectDependencies?: object
-    ): void;
-
-    removeRegisteredServiceDescriptions(serviceName: string): void;
-
-    editRegisteredServiceDescriptions<T>(serviceName: string, callback: T): void;
-
-    registerExternalServicesRegister(
-        externalServicesRegister: ExternalServicesRegister
-    ): void;
 }
