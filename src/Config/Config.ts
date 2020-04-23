@@ -1,4 +1,4 @@
-import {ConfigFilesPathModel} from "./ConfigFilesPathModel";
+import {ConfigFilesPathModel} from './ConfigFilesPathModel';
 
 export interface Config {
     addNewPath(file: ConfigFilesPathModel): any;

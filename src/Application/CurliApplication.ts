@@ -1,4 +1,4 @@
-//import {Express, RequestHandler} from 'express';
+// import {Express, RequestHandler} from 'express';
 
 import {DependencyInjection} from '../DependentyInjection/DependencyInjection';
 import {ModulesDefiner} from '../Modules/ModulesDefiner';
@@ -42,7 +42,7 @@ export interface CurliApplication {
      */
     getContainer(): DependencyInjection | never;
 
-    getExpressApp(): object
+    getExpressApp(): object;
 
     getEnvironment(): string;
 

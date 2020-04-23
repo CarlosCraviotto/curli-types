@@ -1,4 +1,4 @@
-import {ExpressRequestType} from "./ExpressRequestType";
+import {ExpressRequestType} from './ExpressRequestType';
 
 export interface Request {
 

@@ -1,12 +1,11 @@
 
-
 import {
-    Middleware
+    Middleware,
 } from './Middleware';
-import {CommandTypeClass} from "./CommandTypeClass";
-import {HandlerFunctionType} from "./HandlerFunctionType";
-import {HandlerType} from "./HandlerType";
-import {CommandInstanceType} from "./CommandInstanceType";
+import {CommandTypeClass} from './CommandTypeClass';
+import {HandlerFunctionType} from './HandlerFunctionType';
+import {HandlerType} from './HandlerType';
+import {CommandInstanceType} from './CommandInstanceType';
 
 /**
  * Class for the BusSync
@@ -39,6 +38,5 @@ export interface BusSync {
      * @param options It will be sent to all the middlewares an to the handler
      */
      dispatch<T> (command: CommandInstanceType, options?: T): any;
-
 
 }

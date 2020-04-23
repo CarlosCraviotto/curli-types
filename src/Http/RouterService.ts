@@ -1,4 +1,4 @@
-import {DependencyInjection} from "../DependentyInjection";
+import {DependencyInjection} from '../DependentyInjection';
 
 export interface RouterService {
 

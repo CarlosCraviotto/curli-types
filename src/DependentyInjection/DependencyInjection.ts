@@ -1,5 +1,5 @@
 
-export interface DependencyInjection  {
+export interface DependencyInjection {
     /**
      * Get the service
      * @param {string} name of the service

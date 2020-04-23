@@ -1,9 +1,8 @@
 
-import {DependencyInjection} from "../DependentyInjection/DependencyInjection";
-import {Request} from "./Request";
-import {DTOType} from "../Bus/DTOType";
-import {SchemaRequestType} from "./SchemaRequestType";
-
+import {DependencyInjection} from '../DependentyInjection/DependencyInjection';
+import {Request} from './Request';
+import {DTOType} from '../Bus/DTOType';
+import {SchemaRequestType} from './SchemaRequestType';
 
 export interface Controller {
 

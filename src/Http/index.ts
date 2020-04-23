@@ -1,5 +1,4 @@
-export {BaseController} from './Controller';
-export {ControllerOld} from './ControllerOld';
+export {Controller} from './Controller';
 export {ExpressRequestType} from './ExpressRequestType';
 export {Request} from './Request';
 export {RouterService} from './RouterService';

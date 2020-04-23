@@ -1,6 +1,6 @@
 
-import {CommandInstanceType} from "./CommandInstanceType";
-import {NextFunctionType} from "./NextFunctionType";
+import {CommandInstanceType} from './CommandInstanceType';
+import {NextFunctionType} from './NextFunctionType';
 
 /**
  * Interface for a middleware
