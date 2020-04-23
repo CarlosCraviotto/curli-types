@@ -1,8 +1,4 @@
-import {BaseController} from "./BaseController";
-import {Request} from "./Request/Request";
-import {HTTP_CODES, NOT_IMPLEMENTED} from "./ControllerConsts";
-import {RequestBuilder} from "./Request/RequestBuilder";
-import {HttpException} from "./Exception/HttpException";
+import {DependencyInjection} from "../DependentyInjection";
 
 export interface RouterService {
 
@@ -12,5 +8,5 @@ export interface RouterService {
      *
      * @param ControllerClass
      */
-     addControllerClass(ControllerClass: new (c: {get: (p: string) => void}) => any): void;
+     addControllerClass(ControllerClass: new (c: DependencyInjection) => any): void;
 }
