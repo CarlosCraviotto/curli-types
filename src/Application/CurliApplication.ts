@@ -62,7 +62,7 @@ export interface CurliApplication extends EventEmitter{
      * Set a middleware in the express app.
      * @param callable
      */
-    setMiddleware(callable: any): object;
+    setMiddleware(callable: (req: any, res: any, next: ()=>any)=> void): object;
 
     initServer(callback?: any): void;
 
