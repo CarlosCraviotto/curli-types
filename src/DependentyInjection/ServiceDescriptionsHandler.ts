@@ -1,6 +1,4 @@
 
-import {ExternalServicesRegister} from './ExternalServicesRegister';
-
 export interface ServiceDescriptionsHandler {
 
     registerService<T extends {}>(
@@ -16,6 +14,7 @@ export interface ServiceDescriptionsHandler {
     editRegisteredServiceDescriptions<T>(serviceName: string, callback: T): void;
 
     registerExternalServicesRegister(
-        externalServicesRegister: ExternalServicesRegister
+        externalServicesRegister: any
     ): void;
+
 }
