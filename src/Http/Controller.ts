@@ -5,7 +5,7 @@ import {DTOType} from "../Bus/DTOType";
 import {SchemaRequestType} from "./SchemaRequestType";
 
 
-export interface BaseController {
+export interface Controller {
 
     /**
      * The route name, used to refer to it and build it.
@@ -29,7 +29,7 @@ export interface BaseController {
 
     ROUTE_DESCRIPTION?: string ;
 
-    new(container: DependencyInjection): BaseController;
+    new(container: DependencyInjection): Controller;
 
      processRequest(request: Request): Promise<Response>;
 
