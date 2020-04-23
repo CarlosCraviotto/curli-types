@@ -3,8 +3,9 @@
 import {DependencyInjection} from '../DependentyInjection/DependencyInjection';
 import {ModulesDefiner} from '../Modules/ModulesDefiner';
 import {Module} from '../Modules/Module';
+import {EventEmitter} from './EventEmitter';
 
-export interface CurliApplication {
+export interface CurliApplication extends EventEmitter{
 
     /**
      * Add a module definer to extend the modules behaviour.
