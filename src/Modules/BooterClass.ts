@@ -1,4 +1,4 @@
-import {CurliApplication} from "../Application";
+import {CurliApplication} from '../Application';
 
 export interface BooterClass
 {
