@@ -1,12 +1,11 @@
 // import {Express, RequestHandler} from 'express';
 
-import {DependencyInjection} from '../DependentyInjection/DependencyInjection';
 import {ModulesDefiner} from '../Modules/ModulesDefiner';
 import {Module} from '../Modules/Module';
 import {EventEmitter} from './EventEmitter';
+import {HandleContainer} from './HandleContainer';
 
-export interface CurliApplication extends EventEmitter{
-
+export interface CurliApplication extends EventEmitter, HandleContainer{
 
     /**
      * Initial configuration provider when we instantiate this app object.
@@ -36,19 +35,6 @@ export interface CurliApplication extends EventEmitter{
      */
     emit(eventName: string): boolean;
 
-    /**
-     * Set the service container (see curli-di).
-     * We are doing it from the ServiceModulesDefiner
-     *
-     * @param container
-     */
-    setContainer(container: DependencyInjection): void;
-
-    /**
-     * Get the service container (see curli-di).
-     */
-    getContainer(): DependencyInjection | never;
-
     getExpressApp(): object;
 
     getEnvironment(): string;
@@ -62,7 +48,7 @@ export interface CurliApplication extends EventEmitter{
      * Set a middleware in the express app.
      * @param callable
      */
-    setMiddleware(callable: (req: any, res: any, next: ()=>any)=> void): object;
+    setMiddleware(callable: (req: any, res: any, next: () => any) => void): object;
 
     initServer(callback?: any): void;
 
