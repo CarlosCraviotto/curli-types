@@ -11,7 +11,7 @@ export interface ModulesDefiner {
     /**
      * We call it before we go through all the models
      */
-    ini(): void;
+    init(): void;
 
     /**
      * This should return the name of the application event when we want to call the modules.
