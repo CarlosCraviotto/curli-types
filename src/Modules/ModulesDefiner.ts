@@ -11,7 +11,7 @@ export interface ModulesDefiner {
     /**
      * We call it before we go through all the models
      */
-    init(): void;
+    beforeCallModules(): void;
 
     /**
      * This should return the name of the application event when we want to call the modules.
@@ -33,5 +33,5 @@ export interface ModulesDefiner {
     /**
      * We call it after we go through all the models
      */
-    afterCalledModules(): void;
+    afterCallModules(): void;
 }
