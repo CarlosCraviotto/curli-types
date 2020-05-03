@@ -1,5 +1,6 @@
 
 import {CommandInstanceType} from './CommandInstanceType';
+import {QueryInstanceType} from './QueryInstanceType';
 import {NextFunctionType} from './NextFunctionType';
 
 /**
@@ -8,12 +9,16 @@ import {NextFunctionType} from './NextFunctionType';
 export interface Middleware {
 
     /**
-     * Should implement the logic for the middleware and call function next with the command|result
+     * Should implement the logic for the middleware and call function next with the command|query|result
      *
-     * @param command
+     * @param request
      * @param next
      * @param options
      */
-     execute <T> (command: CommandInstanceType, next: NextFunctionType, options?: T): any;
+     execute <T> (
+         request: CommandInstanceType | QueryInstanceType,
+         next: NextFunctionType,
+         options?: T
+    ): any;
 
 }

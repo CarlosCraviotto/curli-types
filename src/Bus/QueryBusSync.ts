@@ -2,15 +2,15 @@
 import {
     Middleware,
 } from './Middleware';
-import {CommandTypeClass} from './CommandTypeClass';
+import {QueryTypeClass} from './QueryTypeClass';
 import {HandlerFunctionType} from './HandlerFunctionType';
 import {HandlerType} from './HandlerType';
-import {CommandInstanceType} from './CommandInstanceType';
+import {QueryInstanceType} from './QueryInstanceType';
 
 /**
  * Class for the BusSync
  */
-export interface BusSync {
+export interface QueryBusSync {
 
     /**
      * Add a middleware to the collection, it will be
@@ -21,22 +21,22 @@ export interface BusSync {
      addMiddleware (middleware: Middleware): void;
 
     /**
-     * Register a handler to be called when we dispatch that command.
+     * Register a handler to be called when we ask that query.
      *
-     * @param command A class command or a string with the name of the class command.
-     * @param handler A function or a class with the method handleCommand declared.
+     * @param query A class query or a string with the name of the class query.
+     * @param handler A function or a class with the method handleQuery declared.
      */
      registerHandler (
-        command: CommandTypeClass | string,
+        command: QueryTypeClass | string,
         handler: HandlerFunctionType | HandlerType
     ): void | never;
 
     /**
-     * Dispatch the command to the bus.
+     * Ask the query to the bus.
      *
-     * @param command An instance of a class already declared in.
+     * @param query An instance of a class already declared in.
      * @param options It will be sent to all the middlewares an to the handler
      */
-     dispatch<T> (command: CommandInstanceType, options?: T): any;
+     ask<T> (command: QueryInstanceType, options?: T): any;
 
 }
