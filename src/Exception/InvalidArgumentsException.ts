@@ -2,9 +2,11 @@ import {InvalidArgumentException} from "./InvalidArgumentException";
 import {InvalidArgumentsJson} from "./InvalidArgumentsJson";
 
 export interface InvalidArgumentsException extends Error {
-    getArgumentsExceptions(): string;
+    getArgumentsExceptions(): Array<InvalidArgumentException>;
 
     toJson(): InvalidArgumentsJson;
 
     add(exception: InvalidArgumentException): void;
+
+    length(): number;
 }
