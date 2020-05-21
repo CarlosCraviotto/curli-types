@@ -5,3 +5,4 @@ export * from './Config';
 export * from './DependentyInjection';
 export * from './Http';
 export * from './Modules';
+export * from './Exception';
