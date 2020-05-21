@@ -1,6 +1,6 @@
 {
   "name": "curli-types",
-  "version": "0.0.1-beta.13",
+  "version": "0.0.1-beta.14",
   "description": "Types for all the curli libraries\n",
   "main": "index",
   "scripts": {
